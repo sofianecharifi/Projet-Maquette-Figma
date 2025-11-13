@@ -1,0 +1,457 @@
+.bandeau{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/*MENU BURGER*/
+.burger {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.burger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Animation du burger quand actif */
+.burger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/*MENU DÉROULANT*/
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 60%;
+  min-width: 250px; 
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease;
+  z-index: 10;
+}
+
+.menu.active {
+  right: 0; 
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 20px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/*SECTION ACCUEIL*/
+.acceuil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; 
+}
+
+.acceuil > img {
+  width: 100%;
+  display: block;
+  height: auto; 
+}
+
+.text_acceuil {
+  position: absolute;
+}
+
+.text_acceuil > h2 {
+  color: white;
+  margin-left: 21px;
+  font-family: "Sansita Swashed", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem; 
+}
+
+.text_acceuil > h3 {
+  color: #e9bd8c;
+  font-family: inter;
+  font-weight: 600;
+  margin-left: 21px;
+}
+
+.text_acceuil > a {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #933c24;
+    margin-left: 21px;
+    width: 114px;
+    height: 30px;
+    line-height: 30px; 
+}
+
+/*SECTION TOP PRODUITS*/
+.titre_top {
+  font-family: 'Sansita Swashed', semibold;
+  text-align: center;
+}
+
+.top_produits {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap; 
+  padding: 20px;
+}
+
+.produit-carte {
+  background-image: url('Image/Rectangle 69.jpg');
+  height: 360px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-basis: 300px; 
+  flex-grow: 1;
+  max-width: 350px; 
+}
+
+.produit-carte .photo_plat {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 220px; 
+}
+
+.produit-carte .photo_plat img {
+  max-width: 80%;
+  max-height: 100%;
+  padding-top: 8px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.prix-info {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-family: 'inter';
+  font-weight: 600;
+}
+
+.text_ajout {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-family: 'inter';
+  font-weight: 500;
+}
+
+.text_ajout > a {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-right: 12px;
+  margin-left: 12px;
+  background-color: #933C24;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*SECTION REDUCTION*/
+.reduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; 
+}
+
+.reduction > img {
+  width: 100%;
+  display: block;
+}
+
+.text_reduction {
+  position: absolute;
+  text-align: center;
+  padding: 0 5%;
+  width: 90%; 
+  box-sizing: border-box; 
+}
+
+.text_reduction > h2 {
+  color: #933C24;
+  font-family: "Sansita Swashed", sans-serif;
+  font-weight: 500;
+  margin-left: 0;
+  font-size: 1.2rem; 
+}
+
+.text_reduction > p {
+  color: #5d5d5d;
+  font-family: inter;
+  font-weight: 400;
+  margin-left: 0;
+}
+
+.text_reduction > a {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: #933c24;
+  font-family: inter;
+  font-weight: 600;
+  margin-left: 0; 
+  padding: 15px 25px; 
+}
+
+/*SECTION DECOUVRIR*/
+.Decouvrir > h2 {
+  font-family: "Sansita Swashed", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.menu_decouvrir {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  color: #5d5d5d;
+  flex-wrap: wrap; 
+  gap: 15px; 
+  padding: 0 10px; 
+}
+
+.menu_decouvrir p:first-of-type {
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 5px;
+  text-decoration-color: #933C24;
+}
+
+/*Grille "Découvrir"*/
+.decouvrir-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.decouvrir-item img {
+  width: 100%; 
+  height: auto;
+  display: block;
+  border-radius: 10px; 
+}
+
+/* --- SECTION A PROPOS --- */
+.a_propos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; 
+  margin-top: 10%;
+}
+
+.texte_a_propos {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.texte_a_propos > div {
+  width: 100%;
+}
+
+.texte_a_propos > div > h2 {
+  font-family: "Sansita Swashed", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+.texte_a_propos > div > p {
+  color: #B9B9B9;
+  font-family: inter;
+  font-weight: 400;
+  padding: 0 10%; 
+}
+
+.texte_a_propos > div > a {
+  display: inline-block; 
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: #933c24;
+  font-family: inter;
+  font-weight: 600;
+  padding: 15px 25px; 
+}
+
+/*SECTION PETITS PLAISIRS*/
+.petits_plaisirs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; 
+}
+
+.titre_petits_plaisirs {
+  font-family: "Sansita Swashed", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-top: auto;
+}
+
+.img_petits_plaisirs {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 30px;
+  padding: 20px;
+}
+
+.plaisir-item {
+  width: 100%;
+  max-width: 350px; 
+}
+
+.plaisir-item img {
+  max-width: 80%; 
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text_petits_plaisirs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: inter;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  
+  /* --- MENU (Desktop) --- */
+  .burger {
+    display: none; 
+  }
+  .menu {
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    box-shadow: none;
+    right: 0; 
+    background: none; 
+    min-width: 0;
+  }
+  .menu ul {
+    display: flex;
+    gap: 20px;
+  }
+  .menu li {
+    margin: 0;
+  }
+  .menu a {
+    font-size: 1rem; 
+  }
+
+  /*ACCUEIL*/
+  .text_acceuil > h2 {
+    font-size: 2.5rem;
+  }
+
+
+  .text_reduction > h2 {
+    font-size: 2rem; 
+  }
+  .text_reduction > a {
+    padding: 23px 35px; 
+  }
+
+  .decouvrir-grid {
+    grid-template-columns: 1fr 1fr; 
+  }
+
+
+  .texte_a_propos > div > a {
+    padding: 23px 35px; 
+  }
+
+  .img_petits_plaisirs {
+    flex-direction: row; 
+    justify-content: space-evenly;
+    align-items: flex-start; 
+  }
+  
+  .plaisir-item {
+      width: 30%; 
+      max-width: none; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .decouvrir-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+footer {
+  background-image: url(Image/fond_footer.png);
+}
+
+.reseaux {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.logo_reseaux p {
+  font-family: 'inter', sans-serif;
+  font-size: 600;
+  color: #E9BD8C;
+}
