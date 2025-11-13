@@ -442,16 +442,59 @@
 
 footer {
   background-image: url(Image/fond_footer.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .reseaux {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-.logo_reseaux p {
+.logo_boulangerie_footer img {
+  width: 20%;
+}
+
+.Suivez-nous {
   font-family: 'inter', sans-serif;
   font-size: 600;
   color: #E9BD8C;
+}
+
+footer h3 {
+  font-family: 'inter', sans-serif;
+  font-size: 700;
+  color: #E9BD8C;
+}
+
+.contacts_footer p {
+  font-family: 'poppins', sans-serif;
+  font-size: 600;
+  color: white;
+}
+
+.explorer_footer {
+  font-family: 'poppins', sans-serif;
+  font-size: 600;
+  color: white;
+}
+
+.a_propos_explorer_actualite {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.actualite {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.Nouveau_delice {
+  display: flex;
+  justify-content: space-evenly;
 }
