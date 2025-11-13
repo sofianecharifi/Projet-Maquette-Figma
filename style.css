@@ -154,8 +154,8 @@
 }
 
 .produit-carte .photo_plat img {
-  max-width: 80%;
-  max-height: 100%;
+  max-width: 70%;
+  max-height: 70%;
   padding-top: 8px;
   display: block;
   margin: 0 auto;
@@ -205,6 +205,7 @@
 
 .text_reduction {
   position: absolute;
+  justify-content: center;
   text-align: center;
   padding: 0 5%;
   width: 90%; 
@@ -268,15 +269,25 @@
 .decouvrir-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.decouvrir-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .decouvrir-item img {
-  width: 100%; 
+  width: 100%;
+  max-width: 280px;
   height: auto;
   display: block;
-  border-radius: 10px; 
+  border-radius: 10px;
+  object-fit: contain;
 }
 
 /* --- SECTION A PROPOS --- */
@@ -414,9 +425,13 @@
   }
 
   .decouvrir-grid {
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 
+  .decouvrir-item img {
+    max-width: 300px;
+  }
 
   .texte_a_propos > div > a {
     padding: 23px 35px; 
@@ -437,6 +452,11 @@
 @media (min-width: 1024px) {
   .decouvrir-grid {
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .decouvrir-item img {
+    max-width: 320px;
   }
 }
 
@@ -497,4 +517,10 @@ footer h3 {
 .Nouveau_delice {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+}
+
+.img_Nouveau_delice img {
+  width: 100px;
+  height: auto;
 }
