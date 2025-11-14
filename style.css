@@ -126,6 +126,11 @@
     padding: 10px 20px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+    transition: transform 0.3s ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.08);
 }
 
 /*SECTION TOP PRODUITS*/
@@ -141,6 +146,7 @@
   justify-content: center;
   flex-wrap: wrap; 
   padding: 20px;
+  transition: gap 0.5s ease;
 }
 
 .produit-carte {
@@ -152,6 +158,7 @@
     border-radius: 12px;
     flex-basis: 280px;
     max-width: 340px;
+    transition: flex-basis 0.5s ease, max-width 0.5s ease;
 }
 
 .produit-carte .photo_plat {
@@ -298,6 +305,7 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  transition: grid-template-columns 0.5s ease, gap 0.5s ease;
 }
 
 .decouvrir-item {
@@ -417,6 +425,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  transition: max-width 0.5s ease;
 }
 
 .text_petits_plaisirs {
@@ -490,7 +499,8 @@
   
   .plaisir-item {
     width: 30%; 
-    max-width: none; 
+    max-width: none;
+    transition: width 0.5s ease, max-width 0.5s ease;
   }
   .bandeau {
     background-color: transparent;
@@ -510,6 +520,7 @@
   .decouvrir-grid {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    
   }
 
   .decouvrir-item img {
@@ -644,4 +655,22 @@ footer h3 {
 .img_Pain_au_raisin img {
   width: 100px;
   height: auto;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Applique ceci à des sections comme la grille de produits */
+.top_produits, .decouvrir-grid {
+  opacity: 0; /* Commence invisible */
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+  /* Utilise animation-delay pour les faire apparaître un par un (JS est mieux pour ça) */
 }
