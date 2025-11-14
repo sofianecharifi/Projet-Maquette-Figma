@@ -1,6 +1,6 @@
 .bandeau{
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
@@ -123,9 +123,9 @@
     border-radius: 15px;
     background-color: #933c24;
     margin-left: 21px;
-    width: 70%;
-    height: auto;
-    line-height: 30px; 
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }
 
 /*SECTION TOP PRODUITS*/
@@ -148,7 +148,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 15px;       /* pour respirer */
+    padding: 15px;
     border-radius: 12px;
     flex-basis: 280px;
     max-width: 340px;
@@ -214,7 +214,9 @@
 
 .text_reduction {
   position: absolute;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
   text-align: center;
   padding: 0 5%;
   width: 100%; 
@@ -246,7 +248,21 @@
   font-family: inter;
   font-weight: 600;
   margin-left: 0; 
-  padding: 15px 25px; 
+  padding: 10px 20px;
+}
+
+@media (max-width: 400px) {
+  .text_reduction > h2 {
+    font-size: 1rem;     
+    margin-bottom: 8px;  
+  }
+
+  .text_reduction > p {
+    font-size: 0.875rem; 
+    margin-bottom: 12px; 
+  }
+
+ 
 }
 
 /*SECTION DECOUVRIR*/
@@ -310,17 +326,23 @@
 
 .texte_a_propos {
   position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 100%; 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  padding: 0 5%; 
+  box-sizing: border-box;
 }
 
 .texte_a_propos > div {
-  width: 50%;
+  width: 90%; 
+  max-width: 600px; 
 }
 
 .texte_a_propos > div > h2 {
@@ -346,7 +368,19 @@
   background-color: #933c24;
   font-family: inter;
   font-weight: 600;
-  padding: 15px 25px; 
+  padding: 10px 20px;
+}
+
+@media (max-width: 400px) {
+  .texte_a_propos > div > h2 {
+    font-size: 1.2rem; 
+    margin-bottom: 8px;
+  }
+  .texte_a_propos > div > p {
+    font-size: 0.85rem; 
+    padding: 0 5%; 
+    margin-bottom: 12px;
+  }
 }
 
 /*SECTION PETITS PLAISIRS*/
@@ -394,7 +428,9 @@
 }
 
 @media (min-width: 768px) {
-  
+  .text_acceuil > a {
+    padding: 23px 35px; /* On le grossit comme les autres */
+}
   /* --- MENU (Desktop) --- */
   .burger {
     display: none; 
@@ -457,12 +493,13 @@
     max-width: none; 
   }
   .bandeau {
-    background-color: transparent;  /* Ajoute cette règle */
-    position: absolute;  /* Pour que le bandeau se superpose à l'image */
+    background-color: transparent;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;  /* Pour qu'il reste au-dessus de l'image */
+    z-index: 10;
+    justify-content: left; 
   }
   .bandeau a {
     color: white;
@@ -527,6 +564,15 @@ footer h3 {
   justify-content: space-evenly;
 }
 
+.contacts_footer,
+.explorer_footer,
+.actualite {
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 10px 15px; 
+}
+
+
 .actualite {
   display: flex;
   flex-wrap: wrap;
@@ -544,7 +590,7 @@ footer h3 {
 /*GRID*/
 .actualite-item {
     display: grid;
-    grid-template-columns: 80px 1fr; /* image + texte */
+    grid-template-columns: 80px 1fr; 
     gap: 15px;
     align-items: center;
     margin-bottom: 20px;
@@ -562,8 +608,8 @@ footer h3 {
 }
 
 .actualite-item .date {
-    color: #E9BD8C;   /* nouvelle couleur */
-    font-weight: 400; /* plus épais */
+    color: #E9BD8C;
+    font-weight: 400;
     font-size: 0.9rem;
 }
 
@@ -598,11 +644,4 @@ footer h3 {
 .img_Pain_au_raisin img {
   width: 100px;
   height: auto;
-}
-
-.filigrane {
-  font-family: 'inter', sans-serif;
-  font-weight: 600;
-  color: #737373;
-  text-align: center;
 }
