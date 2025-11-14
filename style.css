@@ -1,10 +1,10 @@
 .bandeau{
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
-    background-color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 .bandeau img {
@@ -130,7 +130,8 @@
 
 /*SECTION TOP PRODUITS*/
 .titre_top {
-  font-family: 'Sansita Swashed', semibold;
+  font-family: 'Sansita Swashed', sans-serif;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -597,4 +598,11 @@ footer h3 {
 .img_Pain_au_raisin img {
   width: 100px;
   height: auto;
+}
+
+.filigrane {
+  font-family: 'inter', sans-serif;
+  font-weight: 600;
+  color: #737373;
+  text-align: center;
 }
