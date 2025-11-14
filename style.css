@@ -438,8 +438,18 @@ a:hover {
 
 @media (min-width: 768px) {
   .text_acceuil > a {
-    padding: 23px 35px; /* On le grossit comme les autres */
+    padding: 23px 35px; 
+  }
+
+  .a_propos_explorer_actualite {
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 40px; 
+    padding: 40px;
+  }
 }
+
+
+
   /* --- MENU (Desktop) --- */
   .burger {
     display: none; 
@@ -514,7 +524,6 @@ a:hover {
   .bandeau a {
     color: white;
   }
-}
 
 @media (min-width: 1024px) {
   .decouvrir-grid {
@@ -570,17 +579,25 @@ footer h3 {
 }
 
 .a_propos_explorer_actualite {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px; 
+  padding: 20px;
 }
 
-.contacts_footer,
-.explorer_footer,
-.actualite {
-    flex-basis: 300px;
-    flex-grow: 1;
-    padding: 10px 15px; 
+@media (min-width: 600px) {
+  .a_propos_explorer_actualite {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .a_propos_explorer_actualite {
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 40px; 
+    padding: 40px;
+  }
 }
 
 
@@ -668,9 +685,7 @@ footer h3 {
   }
 }
 
-/* Applique ceci à des sections comme la grille de produits */
 .top_produits, .decouvrir-grid {
-  opacity: 0; /* Commence invisible */
+  opacity: 0; 
   animation: fadeInSlideUp 0.8s ease-out forwards;
-  /* Utilise animation-delay pour les faire apparaître un par un (JS est mieux pour ça) */
 }
