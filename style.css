@@ -556,25 +556,25 @@ footer {
 
 .Suivez-nous {
   font-family: 'inter', sans-serif;
-  font-size: 600;
+  font-weight: 600;
   color: #E9BD8C;
 }
 
 footer h3 {
   font-family: 'inter', sans-serif;
-  font-size: 700;
+  font-weight: 700;
   color: #E9BD8C;
 }
 
 .contacts_footer p {
   font-family: 'poppins', sans-serif;
-  font-size: 600;
+  font-weight: 600;
   color: white;
 }
 
 .explorer_footer {
   font-family: 'poppins', sans-serif;
-  font-size: 600;
+  font-weight: 600;
   color: white;
 }
 
