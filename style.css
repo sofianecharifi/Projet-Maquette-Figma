@@ -4,6 +4,12 @@
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
+    background-color: white;
+}
+
+.bandeau img {
+  width: 87px;
+  height: 99px;
 }
 
 /*MENU BURGER*/
@@ -90,6 +96,7 @@
 
 .text_acceuil {
   position: absolute;
+  margin-left: 5%;
 }
 
 .text_acceuil > h2 {
@@ -104,6 +111,7 @@
   color: #e9bd8c;
   font-family: inter;
   font-weight: 600;
+  font-size: 1.5rem;
   margin-left: 21px;
 }
 
@@ -115,8 +123,8 @@
     border-radius: 15px;
     background-color: #933c24;
     margin-left: 21px;
-    width: 114px;
-    height: 30px;
+    width: 70%;
+    height: auto;
     line-height: 30px; 
 }
 
@@ -208,7 +216,7 @@
   justify-content: center;
   text-align: center;
   padding: 0 5%;
-  width: 90%; 
+  width: 100%; 
   box-sizing: border-box; 
 }
 
@@ -311,7 +319,7 @@
 }
 
 .texte_a_propos > div {
-  width: 100%;
+  width: 50%;
 }
 
 .texte_a_propos > div > h2 {
@@ -444,8 +452,19 @@
   }
   
   .plaisir-item {
-      width: 30%; 
-      max-width: none; 
+    width: 30%; 
+    max-width: none; 
+  }
+  .bandeau {
+    background-color: transparent;  /* Ajoute cette règle */
+    position: absolute;  /* Pour que le bandeau se superpose à l'image */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;  /* Pour qu'il reste au-dessus de l'image */
+  }
+  .bandeau a {
+    color: white;
   }
 }
 
@@ -510,7 +529,6 @@ footer h3 {
 .actualite {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   flex-direction: column;
 }
 
@@ -518,9 +536,65 @@ footer h3 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/*GRID*/
+.actualite-item {
+    display: grid;
+    grid-template-columns: 80px 1fr; /* image + texte */
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.actualite-item img {
+    width: 80px;
+    height: auto;
+}
+
+.actualite-item p {
+    margin: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.actualite-item .date {
+    color: #E9BD8C;   /* nouvelle couleur */
+    font-weight: 400; /* plus épais */
+    font-size: 0.9rem;
+}
+
+/*fin grid*/
+
+.date {
+  font-weight: 400;
+  color: #E9BD8C;
+  margin-left: 10%;
+  margin-block-end: 0;
+}
+
+.type_plat_footer {
+  font-weight: 500;
+  color: white;
+  margin-left: 10%;
+  margin-block-end: 0;
 }
 
 .img_Nouveau_delice img {
+  width: 100px;
+  height: auto;
+}
+
+
+.Pain_au_raisin {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.img_Pain_au_raisin img {
   width: 100px;
   height: auto;
 }
